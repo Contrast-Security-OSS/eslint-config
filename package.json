@@ -1,6 +1,6 @@
 {
   "name": "@contrast/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base eslint configuration for Contrast Node projects.",
   "license": "ISC",
   "main": "index.js",
