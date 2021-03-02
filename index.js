@@ -15,10 +15,17 @@ module.exports = {
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-spacing': 'error',
+    complexity: ['error', 10],
+    'linebreak-style': ['error', 'unix'],
+    'no-unused-vars': [
+      'error',
+      {
+        args: 'none'
+      }
+    ],
+    'no-var': 'error',
     'object-shorthand': ['error', 'always'],
-    'prefer-rest-params': 'error',
-    'prefer-spread': 'error',
-    'prefer-template': 'error',
+    'prefer-const': 'error',
     'prefer-destructuring': [
       'error',
       {
@@ -26,12 +33,15 @@ module.exports = {
         object: true
       }
     ],
-    complexity: ['error', 10],
-    'prefer-const': 'error',
-    'no-var': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'error',
+
+    // plugin-mocha
+    'mocha/no-exclusive-tests': 'error',
+
+    // plugin-node
     'node/shebang': 'off',
-    'linebreak-style': ['error', 'unix'],
-    'no-unused-vars': ['error', { args: 'none' }],
     'node/no-unsupported-features/es-syntax': [
       'error',
       {
@@ -50,6 +60,8 @@ module.exports = {
         ignoreModuleItems: ['domain', 'process.binding']
       }
     ],
+
+    // plugin-prettier
     'prettier/prettier': [
       'error',
       {
@@ -58,7 +70,6 @@ module.exports = {
         tabWidth: 2,
         useTabs: false
       }
-    ],
-    'mocha/no-exclusive-tests': 'error'
+    ]
   }
 };
