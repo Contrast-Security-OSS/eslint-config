@@ -11,7 +11,7 @@
     "postversion": "npm publish && git push origin && git push origin --tags"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.0.0"
   },
   "devDependencies": {
     "eslint": "^7.27.0",
