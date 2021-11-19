@@ -3,12 +3,12 @@
 module.exports = {
   env: {
     node: true,
-    mocha: true
+    mocha: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   parserOptions: { ecmaVersion: 2018 },
   plugins: ['mocha', 'node', 'prettier'],
@@ -20,8 +20,8 @@ module.exports = {
     'no-unused-vars': [
       'error',
       {
-        args: 'none'
-      }
+        args: 'none',
+      },
     ],
     'no-var': 'error',
     'object-shorthand': ['error', 'always'],
@@ -30,8 +30,8 @@ module.exports = {
       'error',
       {
         array: false,
-        object: true
-      }
+        object: true,
+      },
     ],
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
@@ -45,31 +45,28 @@ module.exports = {
     'node/no-unsupported-features/es-syntax': [
       'error',
       {
-        ignores: []
-      }
+        ignores: [],
+      },
     ],
     'node/no-unsupported-features/es-builtins': [
       'error',
       {
-        ignores: []
-      }
+        ignores: [],
+      },
     ],
     'node/no-deprecated-api': [
       'warn',
       {
-        ignoreModuleItems: ['domain', 'process.binding']
-      }
+        ignoreModuleItems: ['domain', 'process.binding'],
+      },
     ],
 
     // plugin-prettier
     'prettier/prettier': [
       'error',
       {
-        arrowParens: 'always',
         singleQuote: true,
-        tabWidth: 2,
-        useTabs: false
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
