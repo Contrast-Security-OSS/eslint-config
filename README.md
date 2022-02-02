@@ -18,7 +18,7 @@ Add the following to your `.eslintrc.json`:
 
 For compatibility with prettier, add the following to `package.json`:
 
-```json
+```jsonc
 {
   // ...
   "prettier": {
