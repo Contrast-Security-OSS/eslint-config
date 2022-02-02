@@ -1,17 +1,12 @@
 'use strict';
 
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
+  root: true,
   env: {
     node: true,
-    mocha: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:node/recommended',
-    'plugin:prettier/recommended',
-  ],
-  parserOptions: { ecmaVersion: 2018 },
-  plugins: ['mocha', 'node', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-spacing': 'error',
@@ -29,39 +24,20 @@ module.exports = {
     'prefer-destructuring': [
       'error',
       {
-        array: false,
-        object: true,
+        VariableDeclarator: {
+          array: true,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: false,
+          object: false,
+        },
       },
     ],
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
 
-    // plugin-mocha
-    'mocha/no-exclusive-tests': 'error',
-
-    // plugin-node
-    'node/shebang': 'off',
-    'node/no-unsupported-features/es-syntax': [
-      'error',
-      {
-        ignores: [],
-      },
-    ],
-    'node/no-unsupported-features/es-builtins': [
-      'error',
-      {
-        ignores: [],
-      },
-    ],
-    'node/no-deprecated-api': [
-      'warn',
-      {
-        ignoreModuleItems: ['domain', 'process.binding'],
-      },
-    ],
-
-    // plugin-prettier
     'prettier/prettier': [
       'error',
       {
@@ -69,4 +45,41 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.js', '*.cjs', '*.mjs'],
+      extends: ['plugin:node/recommended'],
+      rules: {
+        'node/no-deprecated-api': [
+          'warn',
+          {
+            ignoreModuleItems: ['domain', 'process.binding'],
+          },
+        ],
+      },
+    },
+    {
+      files: ['*.spec.js', '*.test.js'],
+      extends: ['plugin:mocha/recommended'],
+      rules: {
+        'mocha/no-exclusive-tests': 'error',
+      },
+    },
+    {
+      files: ['*.ts'],
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            args: 'none',
+          },
+        ],
+      },
+    },
+  ],
 };
+
+module.exports = config;
