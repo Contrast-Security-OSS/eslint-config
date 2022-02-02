@@ -10,6 +10,7 @@ const config = {
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-spacing': 'error',
+    'comma-dangle': ['error', 'only-multiline'],
     complexity: ['error', 10],
     'linebreak-style': ['error', 'unix'],
     'no-unused-vars': [
@@ -42,6 +43,7 @@ const config = {
       'error',
       {
         singleQuote: true,
+        trailingComma: 'all',
       },
     ],
   },
@@ -70,6 +72,9 @@ const config = {
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        'comma-dangle': 'off',
+        '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
+
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'error',

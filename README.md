@@ -22,7 +22,8 @@ For compatibility with prettier, add the following to `package.json`:
 {
   // ...
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }
 ```
