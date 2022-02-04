@@ -4,9 +4,6 @@
   "description": "Base eslint configuration for Contrast Node projects.",
   "repository": "Contrast-Security-OSS/eslint-config",
   "license": "ISC",
-  "files": [
-    "index.js"
-  ],
   "main": "index.js",
   "scripts": {
     "test": "eslint .",
@@ -14,7 +11,7 @@
     "postversion": "npm publish && git push origin && git push origin --tags"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">= 12"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",

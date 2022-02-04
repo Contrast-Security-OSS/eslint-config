@@ -49,6 +49,15 @@ const config = {
   },
   overrides: [
     {
+      files: ['*.spec.*', '*.test.*'],
+      extends: ['plugin:mocha/recommended'],
+      rules: {
+        'mocha/no-exclusive-tests': 'error',
+      },
+    },
+
+    // js-specific rules
+    {
       files: ['*.js', '*.cjs', '*.mjs'],
       extends: ['plugin:node/recommended'],
       rules: {
@@ -60,13 +69,8 @@ const config = {
         ],
       },
     },
-    {
-      files: ['*.spec.js', '*.test.js'],
-      extends: ['plugin:mocha/recommended'],
-      rules: {
-        'mocha/no-exclusive-tests': 'error',
-      },
-    },
+
+    // typescript-specific rules
     {
       files: ['*.ts'],
       plugins: ['@typescript-eslint'],
