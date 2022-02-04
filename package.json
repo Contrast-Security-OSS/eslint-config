@@ -6,9 +6,7 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "preversion": "npm test",
-    "postversion": "npm publish && git push origin && git push origin --tags"
+    "test": "eslint ."
   },
   "engines": {
     "node": ">= 12"
