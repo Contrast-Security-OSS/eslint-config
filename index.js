@@ -38,6 +38,7 @@ const config = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
+    strict: ['error', 'safe'],
 
     'prettier/prettier': [
       'error',
