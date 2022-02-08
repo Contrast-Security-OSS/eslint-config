@@ -81,6 +81,13 @@ const config = {
         'comma-dangle': 'off',
         '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
 
+        '@typescript-eslint/no-this-alias': [
+          'error',
+          {
+            allowedNames: ['self'],
+          },
+        ],
+
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'error',
