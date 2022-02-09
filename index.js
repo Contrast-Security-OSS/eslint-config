@@ -6,7 +6,7 @@ const config = {
   env: {
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended'],
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-spacing': 'error',
@@ -39,21 +39,14 @@ const config = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     strict: ['error', 'safe'],
-
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-      },
-    ],
   },
   overrides: [
     {
-      files: ['*.spec.*', '*.test.*'],
+      files: ['test/**', '*.spec.*', '*.test.*'],
       extends: ['plugin:mocha/recommended'],
       rules: {
         'mocha/no-exclusive-tests': 'error',
+        'mocha/no-exports': 'off',
         'mocha/no-setup-in-describe': 'off',
       },
     },
