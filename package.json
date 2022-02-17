@@ -33,6 +33,17 @@
   "eslintConfig": {
     "extends": [
       "./lib/index.js"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "lib/rules/base.js"
+        ],
+        "rules": {
+          "quote-props": ["error", "consistent"],
+          "sort-keys": ["error", "asc", { "caseSensitive": false }]
+        }
+      }
     ]
   },
   "prettier": {
