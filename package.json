@@ -1,6 +1,6 @@
 {
   "name": "@contrast/eslint-config",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "description": "Base eslint configuration for Contrast Node projects.",
   "repository": "Contrast-Security-OSS/eslint-config",
   "license": "ISC",
