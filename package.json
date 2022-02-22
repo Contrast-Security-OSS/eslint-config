@@ -9,7 +9,7 @@
     "lib/"
   ],
   "scripts": {
-    "test": "eslint ."
+    "test": "eslint lib/"
   },
   "engines": {
     "node": ">=12.13.0"
