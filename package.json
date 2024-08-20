@@ -43,13 +43,6 @@
           "quote-props": [
             "error",
             "consistent"
-          ],
-          "sort-keys": [
-            "error",
-            "asc",
-            {
-              "caseSensitive": false
-            }
           ]
         }
       }
