@@ -12,23 +12,23 @@
     "test": "eslint lib/"
   },
   "engines": {
-    "node": ">=16.9.1"
+    "node": ">=18"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.12",
-    "@types/node": "^16.18.119",
+    "@types/node": "^18.19.127",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
     "eslint-plugin-mocha": "^10.5.0",
-    "eslint-plugin-n": "^16.6.2"
+    "eslint-plugin-n": "^17.23.1"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
     "eslint-plugin-mocha": "^10.5.0",
-    "eslint-plugin-n": "^16.6.2"
+    "eslint-plugin-n": "^17.23.1"
   },
   "eslintConfig": {
     "extends": [
